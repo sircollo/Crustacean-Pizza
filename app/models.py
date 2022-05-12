@@ -61,7 +61,7 @@ class Pizza(db.Model):
   def __repr__(self):
     return f'Pizza {self.pizza_name}'
   
-class Topping():
+class Topping(db.Model):
   __tablename__='toppings'
   id = db.Column(db.Integer,primary_key = True)
   topping_name = db.Column(db.String(255),unique=True,nullable=False)
