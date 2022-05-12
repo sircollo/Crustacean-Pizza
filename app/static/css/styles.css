@@ -87,6 +87,7 @@ body {
   background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  overflow-x: hidden;
 }
 
 hr {
@@ -11776,4 +11777,56 @@ section#contact form#contactForm :-ms-input-placeholder {
   text-align: center;
   font-size: 0.9rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+
+
+
+
+
+
+
+header{
+  position: absolute;
+  background-color: #121619;
+  width: 100%;
+  z-index: 10;
+
+}
+.main-pizza{
+  position: absolute;
+  width: 40%;
+  right: 0;
+  top: 0;
+  transform: translate(-5%, 25%);
+  z-index: -1;
+}
+
+.scroll-pizza1{
+  position: absolute;
+  z-index: -1;
+  transform: translate(32%, -50%);
+}
+
+.scroll-pizza2{
+  position: absolute;
+  z-index: -1;
+  transform: translate(40%, 35%);
+}
+
+.scroll-pizza1.scroll{
+  transform: translate(62%, -100%);
+}
+
+.scroll-pizza2.scroll{
+  transform: translate(80%, 70%);
+}
+
+.masthead-subheading{
+  /* position:absolute;
+  z-index: 10;  */
+}
+.masthead-heading{
+  /* position:absolute;
+  z-index: 10; */
 }
