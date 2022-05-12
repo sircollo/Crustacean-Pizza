@@ -14,7 +14,14 @@
 </header>
 
 <section class="highlights">
-s\hzthzthzth
-</section>
+  <div class="container-fluid">
+    <h2 class="text-center">All Pizza</h2>
+    <div class="row" style="padding-left: 10px;">
+
+      {{ macro.displayPizzas(pizzas) }}
+
+    </div>
+  </div>
+
 {% endblock %}
 
