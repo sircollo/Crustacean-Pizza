@@ -1,5 +1,8 @@
 {% extends 'base.html' %}
+{% import 'macros.html' as macro %}
+{% import 'bootstrap/wtf.html' as wtf %}
 {% block content %}
+
 <header class="masthead"style="background-image: url('/static/photos/header-bg.jpg')">
   <div class="container">
       <div class="masthead-subheading">The best <span >PIZZA</span> around</div>
@@ -7,4 +10,26 @@
       <a class="btn btn-primary btn-xl text-uppercase" href="#services">Order Now</a>
   </div>
 </header>
+<div>
+
+  <div class="tab-content" id="menu">
+    <div id="all_Pizza" class="tab-pane fade in active">
+        <h3>All Pizza</h3>
+        <p>{{ macro.displayPizzas(pizza_list)}}</p>
+      </div>
+  <div id="tech" class="tab-pane fade">
+    <h3>Technology</h3>
+    <p>{{ macro.displayPizzas(large_pizza)}}</p>
+  </div>
+  <div id="farm" class="tab-pane fade">
+    <h3>Farming</h3>
+    <p>{{ macro.displayPizzas(medium_pizza) }}</p>
+  </div>
+  <div id="interview" class="tab-pane fade">
+    <h3>Interview</h3>
+    <p>{{ macro.displayPizzas(small_pizza) }}</p>
+  </div>
+  
+</div>
+</div>
 {% endblock %}
