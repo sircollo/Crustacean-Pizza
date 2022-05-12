@@ -1,4 +1,5 @@
-@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Syne+Tactile&display=swap');
+
 /*!
 * Start Bootstrap - Agency v7.0.11 (https://startbootstrap.com/theme/agency)
 * Copyright 2013-2022 Start Bootstrap
@@ -11353,7 +11354,7 @@ p {
 }
 #mainNav .navbar-brand {
   color: #ffc800;
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: 'Syne Tactile', cursive;
   font-weight: 700;
   letter-spacing: 0.0625em;
   text-transform: uppercase;
@@ -11380,7 +11381,7 @@ p {
     transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
   }
   #mainNav .navbar-brand {
-    font-size: 1.5em;
+    font-size: 2.5em;
     transition: font-size 0.3s ease-in-out;
   }
   #mainNav .navbar-brand img {
@@ -11791,7 +11792,12 @@ header{
   background-color: #121619;
   width: 100%;
   z-index: 10;
+  height: 100vh;
 
+}
+a.navbar-brand.logo{
+  font-family: 'Syne Tactile', cursive;
+  position: fixed;
 }
 .main-pizza{
   position: absolute;
@@ -11822,11 +11828,8 @@ header{
   transform: translate(80%, 70%);
 }
 
-.masthead-subheading{
-  /* position:absolute;
-  z-index: 10;  */
-}
-.masthead-heading{
-  /* position:absolute;
-  z-index: 10; */
+.highlights{
+  position: absolute;
+  margin-top: 100vh;
+  height: 53vh;
 }
