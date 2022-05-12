@@ -14,6 +14,7 @@ class User(db.Model,UserMixin):
   username = db.Column(db.String(255),unique=True,nullable=False)
   pass_secure = db.Column(db.String(255),nullable=True)
   
+  
   @property
   def set_password(self):
     raise AttributeError('You cannot read password attr')
@@ -41,7 +42,7 @@ class Pizza(db.Model):
   __tablename__='pizzas'
   id = db.Column(db.Integer,primary_key = True)
   pizza_name = db.Column(db.String(255),unique=True,nullable=False)
-  pizza_size = db.Column(db.String(255),unique=True,nullable=False)
+  pizza_size = db.Column(db.String(255),nullable=False)
   pizza_price = db.Column(db.Integer(),nullable=True) 
   pizza_picture_path = db.Column(db.String())
   
@@ -54,8 +55,9 @@ class Pizza(db.Model):
     db.session.delete(self)
     db.session.commit()
 
-  def get_pizzas(cls,size):
-    pizzas = Pizza.query.filter_by(size=size).all()
+  @classmethod
+  def get_pizzas(cls,pizza_size):
+    pizzas = Pizza.query.filter_by(pizza_size=pizza_size).all()
     return pizzas
   
   def __repr__(self):

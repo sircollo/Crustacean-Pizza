@@ -2,8 +2,6 @@
 {% import 'macros.html' as macro %}
 {% import 'bootstrap/wtf.html' as wtf %}
 {% block content %}
-
-
 <header class="masthead"style="background-image: url('/static/photos/landing-bg.png')">
   <img class="main-pizza" src="static/photos/main_pizza.png" alt="main-pizza">
   <img class="scroll-pizza1" src="static/photos/scroll_pizza_1.png" alt="scroll-pizza1">
@@ -14,27 +12,15 @@
       <a class="btn btn-primary btn-xl text-uppercase" href="#services">Order Now</a>
   </div>
 </header>
-<div>
-
-  <div class="tab-content" id="menu">
-    <div id="all_Pizza" class="tab-pane fade in active">
-        <h3>All Pizza</h3>
-        <p>{{ macro.displayPizzas(pizza_list)}}</p>
+<div class="container-fluid bg-dark text-white" style="padding-top: 2%;">
+  <div class="row">
+    {% for pizza in large_pizza %}
+      <div class="col-md-3">
+          {{pizza.pizza_name}}
       </div>
-  <div id="tech" class="tab-pane fade">
-    <h3>Technology</h3>
-    <p>{{ macro.displayPizzas(large_pizza)}}</p>
+      {% endfor %}
   </div>
-  <div id="farm" class="tab-pane fade">
-    <h3>Farming</h3>
-    <p>{{ macro.displayPizzas(medium_pizza) }}</p>
-  </div>
-  <div id="interview" class="tab-pane fade">
-    <h3>Interview</h3>
-    <p>{{ macro.displayPizzas(small_pizza) }}</p>
-  </div>
-  
 </div>
-</div>
+
 {% endblock %}
 
