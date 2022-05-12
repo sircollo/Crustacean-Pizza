@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block newPizza %}
+<div id="particles-js">
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6 post-form" id="postform">
+      <h2 class="text-center">Add New Pizza</h2>
+      {{wtf.quick_form(form)}}
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+</div>
+{% endblock %}
