@@ -4,6 +4,7 @@ class Config:
   SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 
+
 class TestConfig(Config):
   pass
 
