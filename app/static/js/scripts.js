@@ -52,3 +52,29 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+//////////////////////////
+
+function slice() {
+    var scrollPizza1 = document.querySelector(".scroll-pizza1");
+    var scrollPizza2 = document.querySelector(".scroll-pizza2");
+    
+      var windowHeight = window.innerHeight;
+      var elementTop1 = scrollPizza1.getBoundingClientRect().top;
+      var elementTop2 = scrollPizza2.getBoundingClientRect().top;
+      var elementVisible = 500;
+
+      if (elementTop1 || elementTop2 < windowHeight - elementVisible) {
+        scrollPizza1.classList.add("scroll");
+        scrollPizza2.classList.add("scroll");
+      } else {
+        scrollPizza1.classList.remove("scroll");
+        scrollPizza2.classList.remove("scroll");
+      }
+    }
+    
+  window.addEventListener("scroll", slice);
+
+    // To check the scroll position on page load
+    slice1();
+    

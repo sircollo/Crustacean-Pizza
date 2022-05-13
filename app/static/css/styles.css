@@ -11321,7 +11321,7 @@ p {
 
 @media (min-width: 768px) {
   section {
-    padding: 9rem 0;
+    padding: 2rem 0;
   }
 }
 .btn-xl {
@@ -11811,28 +11811,35 @@ a.navbar-brand.logo{
 
 .scroll-pizza1{
   position: absolute;
-  z-index: -1;
-  transform: translate(32%, -50%);
+  z-index: -2;
+  top: 100px;
+  right: 500px;
+  transition: all 0.5s ease-in;
 }
 
 .scroll-pizza2{
   position: absolute;
-  z-index: -1;
-  transform: translate(40%, 35%);
+  z-index: -3;
+  top: 500px;
+  right: 500px;
+  transition: all 0.5s ease-in;
 }
 
 .scroll-pizza1.scroll{
-  transform: translate(62%, -100%);
+  top: 200px;
+  right: 250px;
 }
 
 .scroll-pizza2.scroll{
-  transform: translate(80%, 70%);
+  top: 370px;
+  right: 270px;
 }
 
 .highlights{
   position: absolute;
-  margin-top: 100vh;
+  margin-top: 103.8vh;
   height: 53vh;
+  width: 100vw;
 }
 
 section.pizza-card{
@@ -11847,11 +11854,11 @@ column-gap: 2.5em;
 }
 
 section.pizza-card {
-display: inline-block;
-margin:  0.7em;
-padding:  2rem 3rem;
-width:  100%; 
-border: 0.1em solid black;
+  display: inline-block;
+  margin:  0.7em;
+  padding:  2rem 3rem;
+  width:  100%; 
+  border: 0.1em solid black;
   transition: all ease 0.5s;
 }
 
@@ -11882,21 +11889,29 @@ section.pizza-card{
 
 .fries-1{
   position: absolute;
-  transform: translate(0%, 432%);
+  left: 0;
+  bottom: 0;
 }
 .sandwich-1{
   position: absolute;
-  transform: translate(0%, 40%);
+  left: 0;
+  top: 70px;
 }
 .sauce-1{
   position: absolute;
-  transform: translate(1500%, 400%);
+  top: 400px;
+  right: 350px;
 }
 .veg-1{
   position: absolute;
-  transform: translate(1300%, 100%);
+  top: 100px;
+  right: 250px;
 }
 .soda-1{
   position: absolute;
-  transform: translate(570%, 76%);
+  right: 0;
+  bottom: 0;
+}
+.text-center{
+  /* transform: translateX(155%); */
 }
