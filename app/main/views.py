@@ -1,7 +1,8 @@
-from flask import render_template,redirect,url_for
+from flask import render_template,redirect,url_for,request
 from . import main
 from .forms import PizzaForm,OrderForm
 from ..models import Pizza
+
 
 @main.route('/')
 def index():
@@ -30,10 +31,21 @@ def new_pizza():
         pizza_name = form.pizza_name.data
         pizza_size = form.pizza_size.data
         pizza_price = form.pizza_price.data
+        # print(form.pizza_picture_path.data)
+        # pizza_picture_path.save(form.pizza_picture_path.data)
         pizza_picture_path = form.pizza_picture_path.data
-        
+        if 'photo' in request.files:
+            filename = photos.save(request.files['photo'])
+            path = f'photos/{filename}'
+            pizza_picture_path = path
+            # db.session.commit()
+            
+        # filename = pizza_picture_path.save(form.pizza_picture_path.data)
         new_pizza_object = Pizza(pizza_name=pizza_name,pizza_size=pizza_size,pizza_price=pizza_price,pizza_picture_path=pizza_picture_path)
         new_pizza_object.save_pizza()
         # return redirect(url_for('main.index'))
     return render_template('new_pizza.html',form = form)
         
+@main.route('/checkout')
+def checkout():
+    return render_template('cart.html')
