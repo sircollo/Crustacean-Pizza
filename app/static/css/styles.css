@@ -79,6 +79,7 @@
 
 body {
   margin: 0;
+  min-height: 100vh;
   font-family: var(--bs-body-font-family);
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
@@ -11877,4 +11878,25 @@ section.pizza-card{
   border: none;
   border-radius: 20px;
   box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.3) ;
+}
+
+.fries-1{
+  position: absolute;
+  transform: translate(0%, 432%);
+}
+.sandwich-1{
+  position: absolute;
+  transform: translate(0%, 40%);
+}
+.sauce-1{
+  position: absolute;
+  transform: translate(1500%, 400%);
+}
+.veg-1{
+  position: absolute;
+  transform: translate(1300%, 100%);
+}
+.soda-1{
+  position: absolute;
+  transform: translate(570%, 76%);
 }
