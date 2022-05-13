@@ -2,14 +2,24 @@
 {% import 'bootstrap/wtf.html' as wtf %}
 
 {% block newPizza %}
-<div id="particles-js pt-4">
-  <div class="row">
-    <div class="col-md-3"></div>
-    <div class="col-md-6 post-form" id="postform">
-      <h2 class="text-center">Add New Pizza</h2>
-      {{wtf.quick_form(form)}}
-    </div>
-    <div class="col-md-3"></div>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<form method="POST">
+  {{form.hidden_tag()}}
+  <div class="user-box">
+    {{form.pizza_name}}
+    <label>Name</label>
   </div>
-</div>
+  <div class="user-box">
+    {{form.pizza_size}}
+    <label>Size</label>
+  </div>
+  <div class="rem">
+    {{form.pizza_price}}
+  </div class="btn">    
+  <div class="rem">
+    {{form.pizza_picture_path}}
+  </div class="btn">   
+    {{form.submit}}
+  
+</form>
 {% endblock %}
