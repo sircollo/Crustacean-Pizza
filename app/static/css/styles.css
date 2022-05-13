@@ -11833,3 +11833,48 @@ a.navbar-brand.logo{
   margin-top: 100vh;
   height: 53vh;
 }
+
+section.pizza-card{
+  /* background-color: #3d3d3f; */
+  font-weight: 500;
+  padding: 0 33%;
+}
+
+article {
+column-width: 20em;
+column-gap: 2.5em;
+}
+
+section.pizza-card {
+display: inline-block;
+margin:  0.7em;
+padding:  2rem 3rem;
+width:  100%; 
+border: 0.1em solid black;
+  transition: all ease 0.5s;
+}
+
+section.pizza-card:hover {
+  transform: scale(1.02);
+  box-shadow: 5px 5px 25px rgba(0, 0, 0) ;
+}
+
+p {
+text-align:  left;
+margin:  1rem 0; 
+}
+
+h1 {
+font-size:  4rem;
+font-weight:  800;
+}
+
+section .post{
+  overflow-wrap: break-word;
+}
+section.pizza-card{
+  font-family: 'Montserrat Alternates', sans-serif;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.3) ;
+}

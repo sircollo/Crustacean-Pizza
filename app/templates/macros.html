@@ -1,13 +1,13 @@
 {% macro displayPizzas(pizzas) %}
 {% for pizza in pizzas %}
-<div class="card" style="width:300px; margin: 10px;">
+<section class="pizza-card">
+  <p>
   <img class="card-img-top" src="{{url_for('static',filename=pizza.profile_pic_path)}}" alt="Card image">
-  <div class="card-body">
     <h4 class="card-title">{{pizza.pizza_name}}</h4>
     <p class="card-text">{{pizza.pizza_price}}</p>
     <a href="#" class="btn btn-primary">{{pizza.pizza_price}}</a>
-  </div>
-</div>
+  </p>
+</section>
 
 {%endfor%}
 {% endmacro %}
