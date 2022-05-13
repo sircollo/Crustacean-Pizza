@@ -6,3 +6,9 @@ from . import main
 def index():
     title = 'Crustacean Pizza'
     return render_template('index.html', title=title)
+
+
+@main.route('/about')
+def about():
+    title = 'Crustacean Pizza'
+    return render_template('about.html', title=title)    
