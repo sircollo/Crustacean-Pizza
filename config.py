@@ -2,6 +2,9 @@ import os
 
 class Config:
   SQLALCHEMY_TRACK_MODIFICATIONS = False
+  SECRET_KEY = os.environ.get('SECRET_KEY')
+  SECRET_KEY = 'hiiniformstu'
+  UPLOADED_PHOTOS_DEST ='app/static/photos'
 
 
 

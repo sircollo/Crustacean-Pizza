@@ -1,10 +1,28 @@
 {% extends 'base.html' %}
+{% import 'macros.html' as macro %}
+{% import 'bootstrap/wtf.html' as wtf %}
 {% block content %}
-<header class="masthead"style="background-image: url('/static/photos/header-bg.jpg')">
+<header class="masthead"style="background-image: url('/static/photos/landing-bg.png')">
+  <img class="main-pizza" src="static/photos/main_pizza.png" alt="main-pizza">
+  <img class="scroll-pizza1" src="static/photos/scroll_pizza_1.png" alt="scroll-pizza1">
+  <img class="scroll-pizza2" src="static/photos/scroll_pizza_2.png" alt="scroll-pizza2">
   <div class="container">
       <div class="masthead-subheading">The best <span >PIZZA</span> around</div>
       <div class="masthead-heading text-uppercase">Enjoy our Pizzas</div>
       <a class="btn btn-primary btn-xl text-uppercase" href="#services">Order Now</a>
   </div>
 </header>
+
+<section class="highlights">
+  <div class="container-fluid">
+    <h2 class="text-center">All Pizza</h2>
+    <div class="row" style="padding-left: 10px;">
+    <article>
+      {{ macro.displayPizzas(pizzas) }}
+    </article>
+    </div>
+  </div>
+
+ 
 {% endblock %}
+

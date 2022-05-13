@@ -1,4 +1,5 @@
-@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Syne+Tactile&display=swap');
+
 /*!
 * Start Bootstrap - Agency v7.0.11 (https://startbootstrap.com/theme/agency)
 * Copyright 2013-2022 Start Bootstrap
@@ -78,6 +79,7 @@
 
 body {
   margin: 0;
+  min-height: 100vh;
   font-family: var(--bs-body-font-family);
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
@@ -87,6 +89,7 @@ body {
   background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  overflow-x: hidden;
 }
 
 hr {
@@ -11352,7 +11355,7 @@ p {
 }
 #mainNav .navbar-brand {
   color: #ffc800;
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: 'Syne Tactile', cursive;
   font-weight: 700;
   letter-spacing: 0.0625em;
   text-transform: uppercase;
@@ -11379,7 +11382,7 @@ p {
     transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
   }
   #mainNav .navbar-brand {
-    font-size: 1.5em;
+    font-size: 2.5em;
     transition: font-size 0.3s ease-in-out;
   }
   #mainNav .navbar-brand img {
@@ -11776,4 +11779,124 @@ section#contact form#contactForm :-ms-input-placeholder {
   text-align: center;
   font-size: 0.9rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+
+
+
+
+
+
+
+header{
+  position: absolute;
+  background-color: #121619;
+  width: 100%;
+  z-index: 10;
+  height: 100vh;
+
+}
+a.navbar-brand.logo{
+  font-family: 'Syne Tactile', cursive;
+  position: fixed;
+}
+.main-pizza{
+  position: absolute;
+  width: 40%;
+  right: 0;
+  top: 0;
+  transform: translate(-5%, 25%);
+  z-index: -1;
+}
+
+.scroll-pizza1{
+  position: absolute;
+  z-index: -1;
+  transform: translate(32%, -50%);
+}
+
+.scroll-pizza2{
+  position: absolute;
+  z-index: -1;
+  transform: translate(40%, 35%);
+}
+
+.scroll-pizza1.scroll{
+  transform: translate(62%, -100%);
+}
+
+.scroll-pizza2.scroll{
+  transform: translate(80%, 70%);
+}
+
+.highlights{
+  position: absolute;
+  margin-top: 100vh;
+  height: 53vh;
+}
+
+section.pizza-card{
+  /* background-color: #3d3d3f; */
+  font-weight: 500;
+  padding: 0 33%;
+}
+
+article {
+column-width: 20em;
+column-gap: 2.5em;
+}
+
+section.pizza-card {
+display: inline-block;
+margin:  0.7em;
+padding:  2rem 3rem;
+width:  100%; 
+border: 0.1em solid black;
+  transition: all ease 0.5s;
+}
+
+section.pizza-card:hover {
+  transform: scale(1.02);
+  box-shadow: 5px 5px 25px rgba(0, 0, 0) ;
+}
+
+p {
+text-align:  left;
+margin:  1rem 0; 
+}
+
+h1 {
+font-size:  4rem;
+font-weight:  800;
+}
+
+section .post{
+  overflow-wrap: break-word;
+}
+section.pizza-card{
+  font-family: 'Montserrat Alternates', sans-serif;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.3) ;
+}
+
+.fries-1{
+  position: absolute;
+  transform: translate(0%, 432%);
+}
+.sandwich-1{
+  position: absolute;
+  transform: translate(0%, 40%);
+}
+.sauce-1{
+  position: absolute;
+  transform: translate(1500%, 400%);
+}
+.veg-1{
+  position: absolute;
+  transform: translate(1300%, 100%);
+}
+.soda-1{
+  position: absolute;
+  transform: translate(570%, 76%);
 }
