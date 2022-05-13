@@ -2,11 +2,15 @@
 {% import 'bootstrap/wtf.html' as wtf %}
 
 {% block newPizza %}
-
-<div id="particles-js pt-4" style="margin-top: 130px">
+<div id="particles-js pt-4" style="height: 100vh; background-color: #fff8ee;">
+  <img class="fries-1" src="static/photos/fries_1.png" alt="fries-1">
+  <img class="sandwich-1" src="static/photos/sandwich_1.png" alt="sandiwich-1">
+  <img class="sauce-1" src="static/photos/sauce_1.png" alt="sauce-1">
+  <img class="veg-1" src="static/photos/veg_1.png" alt="veg-1">
+  <img class="soda-1" src="static/photos/soda_1.png" alt="soda-1">
   <div class="row">
     <div class="col-md-3"></div>
-    <div class="col-md-6 post-form" id="postform">
+    <div class="col-md-6 post-form" id="postform" style="margin-top: 130px;">
       <h2 class="text-center">Add New Pizza</h2>
       {{wtf.quick_form(form)}}
     </div>
