@@ -11,6 +11,13 @@ def index():
     small_pizza = Pizza.query.filter_by(pizza_size = 'Small')
     medium_pizza = Pizza.query.filter_by(pizza_size = 'Medium')
     title = 'Crustacean Pizza'
+    return render_template('index.html', title=title)
+
+
+@main.route('/about')
+def about():
+    title = 'Crustacean Pizza'
+    return render_template('about.html', title=title)    
     return render_template('index.html', title=title,pizzas=pizzas,large_pizza=large_pizza,medium_pizza=medium_pizza,small_pizza=small_pizza)
 
 @main.route('/menu')
