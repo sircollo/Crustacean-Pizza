@@ -1,8 +1,8 @@
 from flask import render_template,redirect,url_for,request
 from . import main
-from .forms import PizzaForm,OrderForm
+from .forms import PizzaForm, OrderForm
 from ..models import Pizza
-
+from .. import db,photos
 
 @main.route('/')
 def index():
@@ -18,7 +18,7 @@ def index():
 def about():
     title = 'Crustacean Pizza'
     return render_template('about.html', title=title)    
-    return render_template('index.html', title=title,pizzas=pizzas,large_pizza=large_pizza,medium_pizza=medium_pizza,small_pizza=small_pizza)
+    # return render_template('index.html', title=title,pizzas=pizzas,large_pizza=large_pizza,medium_pizza=medium_pizza,small_pizza=small_pizza)
 
 @main.route('/menu')
 def menus():
@@ -40,12 +40,14 @@ def new_pizza():
         pizza_price = form.pizza_price.data
         # print(form.pizza_picture_path.data)
         # pizza_picture_path.save(form.pizza_picture_path.data)
+        
         pizza_picture_path = form.pizza_picture_path.data
         if 'photo' in request.files:
             filename = photos.save(request.files['photo'])
             path = f'photos/{filename}'
-            pizza_picture_path = path
-            # db.session.commit()
+            pizza_picture_path = "photos/" + path
+            print(pizza_picture_path)
+            db.session.commit()
             
         # filename = pizza_picture_path.save(form.pizza_picture_path.data)
         new_pizza_object = Pizza(pizza_name=pizza_name,pizza_size=pizza_size,pizza_price=pizza_price,pizza_picture_path=pizza_picture_path)

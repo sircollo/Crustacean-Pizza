@@ -56,6 +56,7 @@ window.addEventListener('DOMContentLoaded', event => {
 //////////////////////////
 
 function slice() {
+    console.log("dark");
     var scrollPizza1 = document.querySelector(".scroll-pizza1");
     var scrollPizza2 = document.querySelector(".scroll-pizza2");
     
